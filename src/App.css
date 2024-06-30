@@ -1,0 +1,153 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+:root {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-container {
+  width: 100vw;
+  background-color: #232946;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.gingerbread {
+  padding-top: 1rem;
+  width: 300px;
+}
+
+.gingerbread:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  filter: drop-shadow(0 0 2em #83533e);
+}
+
+.gingerbread:not(:hover) {
+  transform: scale(1);
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+
+.gingerbread:active {
+  transform: scale(1);
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.counters {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.counters > p {
+  font-size: 20px;
+  color: white;
+  padding-bottom: 1rem;
+}
+
+.shop-div {
+  padding-bottom: 2rem;
+  /* width: 90vw; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+ul {
+  width: 90vw;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  border: 2px solid white;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+ul:hover {
+  background-color: #e15833;
+  border: 2px solid #fe9a76;
+  cursor: pointer;
+}
+
+ul:active {
+  background-color: #fe9a76;
+}
+
+li {
+  font-weight: 800;
+  display: flex;
+  color: white;
+  padding: 0.5rem;
+}
+
+ul:hover > li {
+  color: white;
+}
+
+.li-end {
+  justify-content: end;
+}
+
+@media (min-width: 768px) {
+  .background-image {
+    background-image: url("/assets/hearts.jpg");
+    background-size: cover;
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    /* right: 0; */
+    z-index: -1;
+    height: 100vh;
+    /* filter: hue-rotate(10deg); */
+  }
+
+  .main-container {
+    width: 70vw;
+    border: 5px solid #e15833;
+    border-radius: 5px;
+    /* border-right: 5px solid #e15833; */
+  }
+
+  ul {
+    width: 50vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-container {
+    width: 60vw;
+  }
+
+  .gingerbread {
+    padding-top: 2rem;
+  }
+
+  .counters {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  .counters > p {
+    font-size: 25px;
+  }
+
+  ul {
+    width: 35vw;
+    padding: 0.2rem 0.5rem;
+  }
+
+  li {
+    font-size: 18px;
+  }
+}
