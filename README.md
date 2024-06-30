@@ -20,4 +20,8 @@ Cookie.jsx should of been part of counter really as not sure it was worth settin
 Struggled a lot to understand where things are being called component to component and how to use props correctly
 
 Setting up shop but needs to be linked to timer and counter as need to check if there are enough cookies and also update the cookiesPerSecond
-UPDATE - shop now has a function on click to pass to App.jsx which then updates both of the counters. This has however has caused an issue where the cookiePerSecond are not adding to the total if a click is made on the main cookie
+UPDATE - shop now has a function on click to pass to App.jsx which then updates both of the counters.
+
+This has however has caused an issue where the cookiePerSecond are not adding to the total if a click is made on the main cookie
+UPDATE - okay I used chatgpt here as I could not for the life of me work out what was causing the click event to stop the perSecond occuring. I assumed it was something to do with rendering and a side effect was being caused due to the timer??? (I don't know, I have a very smooth brain ;-;)
+From my understanding, useCallback() on the incrementGingerbread function is stopping a re-render which was interrupting the interval. It apparently creates something called a stable reference which doesn't reinitialise the interval so the timer now works correctly.
