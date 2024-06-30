@@ -58,8 +58,6 @@ button {
 }
 
 .shop-div {
-  padding-bottom: 2rem;
-  /* width: 90vw; */
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -97,6 +95,27 @@ ul:hover > li {
 
 .li-end {
   justify-content: end;
+}
+
+.reset {
+  background-color: #fe9a76;
+  border: 2px solid red;
+  color: red;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 0.5rem 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+}
+
+.reset:hover {
+  color: white;
+  background-color: #e15833;
+}
+
+.reset:active {
+  color: red;
 }
 
 @media (min-width: 768px) {

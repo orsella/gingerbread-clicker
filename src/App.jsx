@@ -2,6 +2,7 @@ import "./App.css";
 import Shop from "./components/Shop";
 import Cookie from "./components/Cookie";
 import Timer from "./components/Timer";
+import Reset from "./components/Reset";
 import { useState, useCallback } from "react";
 
 export default function App() {
@@ -31,6 +32,12 @@ export default function App() {
     }
   }
 
+  function resetCounters() {
+    setClicked(false);
+    setGingerbread(0);
+    setGingerbreadPerSecond(1);
+  }
+
   return (
     <>
       <div className="background-image"></div>
@@ -51,6 +58,7 @@ export default function App() {
           </p>
         </div>
         <Shop onPurchase={handlePurchase} />
+        <Reset click={resetCounters} />
       </div>
     </>
   );
